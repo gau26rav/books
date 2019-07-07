@@ -1,0 +1,11 @@
+.modal-container{
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    width: 50%;
+    position: fixed;
+    top: 20%;
+    left: 25%;
+}

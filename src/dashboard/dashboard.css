@@ -1,0 +1,37 @@
+
+.list{
+    display: flex;
+    flex-direction: column;
+}
+
+.list-headers{
+    display: flex;
+    flex-flow: row ;
+    width: auto;
+    align-content: space-around;
+}
+
+.list-row:nth-child(2n+1){
+    background-color: rgba(212, 204, 193, 0.24);
+}
+
+.list-row:nth-child(2n){
+    background-color: rgb(226, 213, 204);
+}
+
+.list-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-bottom: 2px solid grey;
+    padding-bottom: 3%;
+}
+
+.list-data{
+    border-right: 4%;
+}
+
+.list-row:hover{
+    background-color: burlywood;
+    cursor: pointer;
+}
