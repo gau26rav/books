@@ -6,6 +6,12 @@
     flex-flow: column;
     width: 50%;
     position: fixed;
-    top: 20%;
+    top: center;
     left: 25%;
+}
+
+.modal-container .list-data{
+    border-bottom : 2px solid darkolivegreen;
+    margin : 2px;
+    padding : 2px 0;
 }
