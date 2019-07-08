@@ -2,7 +2,7 @@ import React from "react";
 import Modal from "@material-ui/core/Modal";
 import Paper from "@material-ui/core/Paper";
 import "./book-modal.css";
-import { Card, CardContent, CardActions, Typography } from "@material-ui/core";
+import { Card, CardContent, CardActions, Typography, CardHeader } from "@material-ui/core";
 
 export default function BookModal(props) {
   const { openStatus, data: book, popUpHandler } = props;
@@ -24,27 +24,34 @@ export default function BookModal(props) {
     <Modal open={openStatus} onClose={() => popUpHandler(false)}>
       <Paper>
         <div className="modal-container">
-          <h2>
-            {" "}
-            {book.title} with page count {book.pages} Information Modal
-          </h2>
-          <div className="list-data">Unique ID : {book.id}</div>
-          <div className="list-data">Title : {book.title}</div>
-          <div className="list-data">Sub Title {book.subtitle}</div>
-          <div className="list-data">
-            Age of the Book : {getAgeOfBook(book.published)}
-          </div>
-          <div className="list-data">Author : {book.author}</div>
-          <div className="list-data">Description : {book.description}</div>
-          <div className="list-data">Published : {book.published}</div>
-          <div className="list-data">Publisher : {book.publisher}</div>
-          <div className="list-data">Pages : {book.pages}</div>
+          <Card>
+          <CardHeader title={`${book.title} with page count ${book.pages} Information Modal`}>
+
+          </CardHeader>
+          <CardContent>
+            <Typography>
+              <Typography className="list-data">Unique ID : {book.id}</Typography>
+              <div className="list-data">Title : {book.title}</div>
+              <div className="list-data">Sub Title {book.subtitle}</div>
+              <div className="list-data">
+                Age of the Book : {getAgeOfBook(book.published)}
+              </div>
+              <div className="list-data">Author : {book.author}</div>
+              <div className="list-data">Description : {book.description}</div>
+              <div className="list-data">Published : {book.published}</div>
+              <div className="list-data">Publisher : {book.publisher}</div>
+              <div className="list-data">Pages : {book.pages}</div>
+            </Typography>
+          </CardContent>
+          <CardActions>
           <button
-            style={{ margin: "30px" }}
+            style={{ margin: "30px", 'padding' : '20px' }}
             onClick={() => popUpHandler(false)}
           >
             Close Modal
           </button>
+          </CardActions>
+        </Card>
           
         </div>
 
