@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./dashboard.css";
-import BookModal from "../Modal/BookModal";
 import {
   Paper,
   ExpansionPanelSummary,
